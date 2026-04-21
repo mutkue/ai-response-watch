@@ -1,0 +1,30 @@
+{
+  "name": "ai-response-watch",
+  "displayName": "AI Response Watch",
+  "description": "Shows response duration for GitHub Copilot Chat requests in the status bar",
+  "version": "0.1.0",
+  "publisher": "mue3112",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-response-watch.reset",
+        "title": "AI Response Watch: Reset"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npm run compile && vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
